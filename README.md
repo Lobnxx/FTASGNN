@@ -4,7 +4,7 @@ Official implementation of **"FTA-SGNN: Encrypted Traffic Detection with Timesta
 
 
 
-## 🎯 Overview
+## Overview
 
 FTA-SGNN is a security-oriented encrypted traffic detection framework that addresses three critical limitations in existing approaches:
 
@@ -12,27 +12,27 @@ FTA-SGNN is a security-oriented encrypted traffic detection framework that addre
 2. **Underutilized payload-header semantic differences**
 3. **Limited generalization to unknown threats**
 
-## ✨ Key Features
+## Key Features
 
-### 🔧 Traffic Preprocessing Pipeline
+### Traffic Preprocessing Pipeline
 
 - **Traffic Router**: Bidirectional session extraction from raw pcap files
 - **Multi-Process Feature Extraction**: Parallel processing with frame-level feature alignment
 - **Frame-Level Representation**: First 64 bytes per frame with timestamp preservation
 
-### 🧠 Model Components
+### Model Components
 
 - **Timestamp-aware Semantic Encoder (TSE)**: Transformer-based encoder with relative timestamp encoding
 - **Masked Graph Aggregation Module (MGAM)**: GraphSAGE with inductive learning capability
 - **KNN-based Edge Enhancement**: Graph augmentation for capturing family-level similarities
 
-### 🛡️ Adversarial Robustness
+### Adversarial Robustness
 
 - Resilient to timing jitter attacks (±1s perturbation)
 - Robust against packet padding (up to 50%)
 - Adversarial training integration for enhanced defense
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
@@ -80,7 +80,7 @@ FTA-SGNN is a security-oriented encrypted traffic detection framework that addre
               (Malicious / Benign / Multi-class)
 ```
 
-## 🚀 Installation
+## Installation
 
 ### Requirements
 
@@ -98,7 +98,7 @@ git clone https://github.com/chengxian611/Models-and-Raw-Traffic-Processing.git
 cd Models-and-Raw-Traffic-Processing
 ```
 
-## 🛡️ Adversarial Robustness
+## Adversarial Robustness
 
 ### Attack Types
 
@@ -112,11 +112,11 @@ cd Models-and-Raw-Traffic-Processing
    - Blends malicious and benign patterns: `Fₐdᵥ = α·Fₘₐₗ + (1-α)·Fᵦₑₙ`
    - Mixing ratios: α ∈ {0.25, 0.5, 0.75}
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 We would like to thank:
 
